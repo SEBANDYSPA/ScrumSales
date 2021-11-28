@@ -52,6 +52,13 @@ header {
     box-shadow: 0 0 6px rgba(0, 0, 0, .5);
 }
 
+.hamburguer:hover {
+    height: 43px;
+    width: 43px;
+    background-color: powderblue;
+    transition: background-color .5s;
+}
+
 .menu-navegacion {
     position: fixed;
     top: 0;
@@ -119,6 +126,7 @@ header {
 
 .n-service {
     margin-bottom: 7px;
+    margin-top: 10px;
     color: #9f8ad0;
 }
 
@@ -239,6 +247,11 @@ footer {
     color: #fff;
 }
 
+.contacto {
+    word-wrap: 40px;
+    color: #fff;
+}
+
 .brand {
     font-weight: 500;
     font-size: 40px;
@@ -340,6 +353,12 @@ footer {
         width: 80%;
         margin-bottom: 40px;
     }
+
+    .contacto {
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -373,6 +392,10 @@ footer {
     }
 
     .contact-us {
+        width: 90%;
+    }
+
+    .contacto {
         width: 90%;
     }
 
