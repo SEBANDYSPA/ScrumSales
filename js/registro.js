@@ -6,3 +6,4 @@ document.getElementById("btn_registrarse").addEventListener("click", register);
 function register(){
  console.log("funciona");
 }
+
