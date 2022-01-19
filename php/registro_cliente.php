@@ -16,4 +16,9 @@
     
     $ejecutar = mysqli_query($conexion, $query);
 
+    if ($ejecutar){
+        die("Error con el ingreso")
+    }
+    
+
 ?>

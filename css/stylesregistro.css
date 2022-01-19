@@ -45,6 +45,21 @@ h1 {
     font-weight: 700;
 }
 
+
+.success-exito{
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.success-click{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
 form {
     background: #fff;
     padding: 40px 0;
