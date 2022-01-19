@@ -31,6 +31,31 @@ class ApiClientes{
             echo json_encode(array('mensaje' => 'No hay elementos'));
         }
     }
+    
+    // añade datos desde registro_cliente.php
+    function add($item){
+
+        $cliente = new Clientes();
+
+        $res = $cliente -> nuevoCliente($item);
+        $this -> exito('Registrado con EXITO!!');
+    }
+
+    function error ($mensaje){
+        echo json_encode(array('mensaje' => $mensaje));
+    }
+    
+     function exito ($mensaje){
+         echo json_encode(array('mensaje' => $mensaje));
+        
+    }
+
 }
 
 ?>
+
+<html>
+<head>
+<META HTTP-EQUIV="Refresh" CONTENT="2;url=http://127.0.0.1:5500/html/Registro_exitoso.html">
+</head>
+</html>

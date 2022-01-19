@@ -1,24 +1,24 @@
 <?php 
 
-    include 'conexion_bd.php';
+    include_once 'apiclientes.php';
 
+    $api = new ApiClientes();
 
-    /** ASIGNA VARIABLES DE RECGISTRO CLIENTE */
-    $nombre = $_POST['Nombre'];
-    $apellido = $_POST['Apellido'];
-    $correo = $_POST['Correo'];
-    $telefono = $_POST['Telefono'];
-    $clave = $_POST['Contraseña'];
-    
-    /* INSERTA REGISTROS EN TABLA DE BASE DE DATOS */
-    $query = "INSERT INTO registro_cliente (nombre, apellido, correo, telefono, clave) 
-              VALUES('$nombre', '$apellido', '$correo', '$telefono', '$clave')";
-    
-    $ejecutar = mysqli_query($conexion, $query);
+    if(isset($_POST['nombre'])){
+        // Insertar datos
+        $item = array (
+            'nombre' => $_POST['nombre'],
+            'apellido' => $_POST['apellido'],
+            'correo' => $_POST['correo'],
+            'telefono' => $_POST['telefono'],
+            'clave' => $_POST['clave']
+         );
+        // Todo los datos desde registo.html va en el array y lo añade a $item 
+        $api -> add($item);
 
-    if ($ejecutar){
-        die("Error con el ingreso")
-    }
-    
+    }else{
+        $api->error('Error al llamar la API');
+    }   
+
 
 ?>
